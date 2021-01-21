@@ -16,3 +16,9 @@ class MongoConnector:
 
     def insert_record(self, collection, data):
         collection.insert(data)
+
+    def search_records(self, collection, query):
+        return collection.find(query)
+
+    def delete_record(self, collection, query):
+        collection.delete_one(query)

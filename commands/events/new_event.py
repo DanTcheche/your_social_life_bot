@@ -1,2 +1,3 @@
-def next_event():
+
+def new_event():
     return

@@ -8,4 +8,5 @@ Telegram bot to help you with your social life.
     1. `pyenv shell 3.6.6`
 
 1) Install bot dependencies: `pip3 install python-telegram-bot`.
+1) Install bot dependencies: `pip3 pymongo`.
 1) Run the script: `python3 main.py`.

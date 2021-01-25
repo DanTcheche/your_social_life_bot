@@ -21,4 +21,5 @@ class MongoConnector:
         return collection.find(query)
 
     def delete_record(self, collection, query):
-        collection.delete_one(query)
+        deleted = collection.delete_one(query)
+        return deleted.deleted_count > 0

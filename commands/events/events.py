@@ -1,19 +1,16 @@
 import datetime
-import telegram
-
-from commands.events.utils import parse_event
+from commands.events.utils import parse_event, send_message
 from utils import db_handler
 
 
 def events(update, context):
     chat_id = update.effective_chat.id
-    db, events_col = db_handler()
+    db_connector, events_col = db_handler()
 
     query = {"date": {"$gte": datetime.datetime.today()}, "chat_id": chat_id}
-    events_query = __get_events_from_db(db, query)
+    events_query = __get_events_from_db(db_connector, events_col, query)
     message = list_events(events_query)
-    return context.bot.send_message(chat_id=chat_id, text=message,
-                                    parse_mode=telegram.ParseMode.HTML)
+    return send_message(context, chat_id, message)
 
 
 def list_events(events_query):
@@ -25,5 +22,5 @@ def list_events(events_query):
     return message
 
 
-def __get_events_from_db(db_connector, query):
-    return db_connector.search_records(query)
+def __get_events_from_db(db_connector, collection, query):
+    return db_connector.search_records(collection, query)

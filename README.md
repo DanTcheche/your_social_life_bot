@@ -24,7 +24,7 @@
     <a href="https://github.com/DanTcheche/your_social_life_bot/issues">Report Bug</a>
     ·
     <a href="https://github.com/DanTcheche/your_social_life_bot/issues">Request Feature</a>
-·
+    ·
   </p>
 </p>
 
@@ -49,7 +49,6 @@
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
@@ -115,7 +114,7 @@ You can also use the `/setcommands` to define the uses your bot has on the '/' i
    pip3 pymongo
    ```
 4. Run the app:
-   ```JS
+   ```sh
    python3 main.py
    ```
 
@@ -168,8 +167,3 @@ Project Link: [https://github.com/DanTcheche/your_social_life_bot](https://githu
 [stars-url]: https://github.com/DanTcheche/your_social_life_bot/stargazers
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
 [issues-url]: https://github.com/DanTcheche/your_social_life_bot/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/DanTcheche/your_social_life_bot/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/dan-tchechenistky
-[product-screenshot]: images/screenshot.png

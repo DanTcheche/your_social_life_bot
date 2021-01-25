@@ -161,11 +161,11 @@ Project Link: [https://github.com/DanTcheche/your_social_life_bot](https://githu
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/DanTcheche/your_social_life_bot.svg?style=for-the-badge
 [contributors-url]: https://github.com/DanTcheche/your_social_life_bot/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/DanTcheche/your_social_life_bot.svg?style=for-the-badge
 [forks-url]: https://github.com/DanTcheche/your_social_life_botnetwork/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/DanTcheche/your_social_life_bot.svg?style=for-the-badge
 [stars-url]: https://github.com/DanTcheche/your_social_life_bot/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/DanTcheche/your_social_life_bot.svg?style=for-the-badge
 [issues-url]: https://github.com/DanTcheche/your_social_life_bot/issues

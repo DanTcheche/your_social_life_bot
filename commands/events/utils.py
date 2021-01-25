@@ -1,13 +1,10 @@
-import telegram
-
-
 def parse_event(event):
     j_date = event['date'].strftime('%d/%m %H:%M')
-    message = f"<b>{event['name'].capitalize()}</b> the {j_date} in {event['place']}."
+    message = f"<b>{event['name'].capitalize()}</b> the {j_date} in {event['place']}. \n"
+    participants = [participant['name'] for participant in event['participants']]
+    not_assisting = [participant['name'] for participant in event['not_assisting']]
     if event['participants']:
-        message += f" Participants: {event['participants']}."
+        message += f"Participants: {', '.join(participants)}. \n"
+    if event['not_assisting']:
+        message += f"Not assisting: {', '.join(not_assisting)}."
     return message
-
-
-def send_message(context, chat_id, message):
-    return context.bot.send_message(chat_id=chat_id, text=message, parse_mode=telegram.ParseMode.HTML)

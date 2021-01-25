@@ -1,6 +1,6 @@
 import datetime
-from commands.events.utils import parse_event, send_message
-from utils import db_handler
+from commands.events.utils import parse_event
+from utils import db_handler, send_message
 
 
 def events(update, context):

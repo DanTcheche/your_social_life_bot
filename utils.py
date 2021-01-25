@@ -1,4 +1,5 @@
 import datetime
+import telegram
 from db_connector.mongo_connector import MongoConnector
 
 
@@ -13,3 +14,8 @@ def parse_date(date_str):
     format_str = '%d/%m/%Y %H:%M'  # The format
     date = datetime.datetime.strptime(date_str, format_str)
     return date
+
+
+def send_message(context, chat_id, message):
+    return context.bot.send_message(chat_id=chat_id, text=message, parse_mode=telegram.ParseMode.HTML)
+

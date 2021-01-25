@@ -59,15 +59,15 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Why the exponential growth of Telegram in the last month I found myself
-interested in building some usefull bots to help in the daily life.
+With the exponential growth of Telegram in the last month I found myself
+interested in building some useful bots to help in the daily life.
 
 The current main functionalities are:
 * Birthdays management.
   * Adding birthdays.
   * Listing birthdays.
   * Getting next birthday.
-  * Notification when a it's someones birthday.
+  * Notification when it's someone's birthday.
     
 * Events management.
   * Adding events.
@@ -124,12 +124,45 @@ You can also use the `/setcommands` to define the uses your bot has on the '/' i
 
 <!-- USAGE EXAMPLES -->
 
-[comment]: <> (## Usage)
+## Usage
 
-[comment]: <> (Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.)
+Use `/help` to list all commands.
+```sh
+    Commands: 
+    /help - A little help.
+    /birthdays - List all birthdays.
+    /add_birthday dd/mm - Add a birthday.
+    /events - List all events.
+    /add_event name(one word) dd/mm/yyyy hh:mm place - Add an event.
+    /delete_event event_name- Deletes an event.
+    /attend_event event_name - Adds you as a participant.
+    /miss_event event_name - You are not assisting the event.
+```
 
-[comment]: <> (_For more examples, please refer to the [Documentation]&#40;https://example.com&#41;_)
+List all future events:
+```text
+    /events
+```
 
+Add event example:
+```text
+    /add_event RandomEvent 26/01/2021 16:00 Somewhere near
+```
+
+Attend event example:
+```text
+    /attend_event RandomEvent
+```
+
+Miss event example:
+```text
+    /miss_event RandomEvent
+```
+
+Delete event example:
+```text
+    /delete_event RandomEvent
+```
 
 
 <!-- ROADMAP -->

@@ -89,6 +89,7 @@ Open [@BotFather](https://telegram.me/botfather) on Telegram and create a new bo
 Assign it a name. This name won't be the one that is shown on each message, so you can name it whatever you want.
 
 @BotFather will grant you a Token. This is the TOKEN you'll need to interact with the BOT. Keep it private!
+In the `main.py` file replace "YOUR TOKEN with the given TOKEN".
 
 ![./media/bot_father.png](media/bot_father.png)
 
@@ -113,6 +114,7 @@ You can also use the `/setcommands` to define the uses your bot has on the '/' i
    ```sh
    pip3 pymongo
    ```
+
 4. Run the app:
    ```sh
    python3 main.py

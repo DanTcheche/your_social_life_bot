@@ -22,8 +22,12 @@ def add_event(update, context):
         "name": event_args[0].lower(),
         "date": parsed_date,
         "place": ' '.join(event_args[3:]),
-        "creator": update.message.from_user.name,
-        "participants": ""
+        "creator": {
+            'id': update.message.from_user.id,
+            'name': update.message.from_user.name
+        },
+        "participants": [],
+        "not_assisting": []
     }
 
     db_connector.insert_record(events_col, event_document)

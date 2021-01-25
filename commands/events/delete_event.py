@@ -5,7 +5,7 @@ def delete_event(update, context):
     chat_id = update.effective_chat.id
     event_args = context.args
     db_connector, events_col = db_handler()
-    if len(event_args) > 1:
+    if len(event_args) != 1:
         message = f"Invalid message, the only parameter should be the event name."
         return send_message(context, chat_id, message)
 

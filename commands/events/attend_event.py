@@ -1,7 +1,7 @@
 from utils import db_handler, send_message
 
 
-def assist_event(update, context):
+def attend_event(update, context):
     chat_id = update.effective_chat.id
     event_args = context.args
     db_connector, events_col = db_handler()

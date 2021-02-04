@@ -1,5 +1,6 @@
 from telegram.ext import Updater, CommandHandler
 
+from commands.birthdays.birthdays_handler import handle_birthdays
 from commands.events.events_handler import handle_events
 from commands.help import help_command
 
@@ -9,6 +10,7 @@ def main():
     dp = updater.dispatcher
     dp.add_handler(CommandHandler('help', help_command))
     handle_events(dp)
+    handle_birthdays(dp)
     updater.start_polling()
     updater.idle()
 

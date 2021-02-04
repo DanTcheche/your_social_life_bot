@@ -18,3 +18,12 @@ def create_event(chat_id, event_args, parsed_date, user):
         "participants": [],
         "not_assisting": []
     }
+
+
+def create_birthday(chat_id, event_args, parsed_date):
+    return {
+        "chat_id": chat_id,
+        "name": event_args[0].lower(),
+        "date": parsed_date,
+    }
+

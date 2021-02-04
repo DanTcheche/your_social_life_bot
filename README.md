@@ -131,7 +131,7 @@ Use `/help` to list all commands.
     Commands: 
     /help - A little help.
     /birthdays - List all birthdays.
-    /add_birthday name(one word) dd/mm - Add a birthday.
+    /add_birthday name(one word) dd/mm/yyyy - Add a birthday.
     /events - List all events.
     /add_event name(one word) dd/mm/yyyy hh:mm place - Add an event.
     /delete_event event_name- Deletes an event.

@@ -5,7 +5,7 @@ from utils import db_handler, send_message
 
 def events(update, context):
     chat_id = update.effective_chat.id
-    db_connector, events_col = db_handler()
+    db_connector, events_col = db_handler('event')
 
     query = {"date": {"$gte": datetime.datetime.today()}, "chat_id": chat_id}
     events_query = db_connector.search_records(events_col, query)

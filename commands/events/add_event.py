@@ -1,3 +1,4 @@
+from db_connector.document_generator import create_event
 from utils import db_handler, parse_date, send_message
 
 
@@ -17,22 +18,11 @@ def add_event(update, context):
                   f" dd/mm/yyyy hh:mm place."
         return send_message(context, chat_id, message)
 
-    event_document = {
-        "chat_id": chat_id,
-        "name": event_args[0].lower(),
-        "date": parsed_date,
-        "place": ' '.join(event_args[3:]),
-        "creator": {
-            'id': update.message.from_user.id,
-            'name': update.message.from_user.name
-        },
-        "participants": [],
-        "not_assisting": []
-    }
+    event_document = create_event(chat_id, event_args, parsed_date, update.message.from_user)
 
     db_connector.insert_record(events_col, event_document)
 
-    message = f"Event {event_document['name']} created for {event_document['date']}."
+    message = f"Event {event_document['name']} created for {event_document['date'].strftime('%d/%m %H:%M')}."
 
     return send_message(context, chat_id, message)
 

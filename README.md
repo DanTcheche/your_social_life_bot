@@ -66,14 +66,16 @@ The current main functionalities are:
 * Birthdays management.
   * Adding birthdays.
   * Listing birthdays.
-  * Getting next birthday.
-  * Notification when it's someone's birthday.
+  * Getting next birthday (WIP).
+  * Notification when it's someone's birthday (WIP).
     
 * Events management.
   * Adding events.
   * Listing next events.
   * Getting next event.
-  * Notification the day of an event.
+  * Attending or missing events.
+  * Deleting events.  
+  * Notification the day of an event (WIP).
 
 ### Built With
 
@@ -168,7 +170,7 @@ Delete event example:
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/DanTcheche/your_social_life_bot/issues) for a list of proposed features (and known issues).
 
 
 

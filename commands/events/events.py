@@ -8,7 +8,7 @@ def events(update, context):
     db_connector, events_col = db_handler()
 
     query = {"date": {"$gte": datetime.datetime.today()}, "chat_id": chat_id}
-    events_query = __get_events_from_db(db_connector, events_col, query)
+    events_query = db_connector.search_records(events_col, query)
     message = list_events(events_query)
     return send_message(context, chat_id, message)
 
@@ -20,7 +20,3 @@ def list_events(events_query):
         events_list.append(parse_event(event))
     message += "\n".join(events_list)
     return message
-
-
-def __get_events_from_db(db_connector, collection, query):
-    return db_connector.search_records(collection, query)

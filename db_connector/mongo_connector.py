@@ -20,6 +20,9 @@ class MongoConnector:
     def search_records(self, collection, query):
         return collection.find(query)
 
+    def search_record(self, collection, query):
+        return collection.find_one(query)
+
     def delete_record(self, collection, query):
         deleted = collection.delete_one(query)
         return deleted.deleted_count > 0

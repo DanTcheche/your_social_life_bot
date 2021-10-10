@@ -1,4 +1,4 @@
-from pymongo import MongoClient
+from pymongo import MongoClient, DESCENDING
 
 
 class MongoConnector:
@@ -21,7 +21,7 @@ class MongoConnector:
         return collection.find(query)
 
     def search_record(self, collection, query):
-        return collection.find_one(query)
+        return collection.find_one(query, sort=[("date", -1)])
 
     def delete_record(self, collection, query):
         deleted = collection.delete_one(query)

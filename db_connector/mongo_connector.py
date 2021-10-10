@@ -1,4 +1,4 @@
-from pymongo import MongoClient, DESCENDING
+from pymongo import MongoClient
 
 
 class MongoConnector:

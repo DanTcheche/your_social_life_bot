@@ -91,7 +91,7 @@ Open [@BotFather](https://telegram.me/botfather) on Telegram and create a new bo
 Assign it a name. This name won't be the one that is shown on each message, so you can name it whatever you want.
 
 @BotFather will grant you a Token. This is the TOKEN you'll need to interact with the BOT. Keep it private!
-In the `main.py` file replace "YOUR TOKEN with the given TOKEN".
+Use this token in step 3 in the installation steps down below.
 
 ![./media/bot_father.png](media/bot_father.png)
 
@@ -101,25 +101,38 @@ You can also use the `/setcommands` to define the uses your bot has on the '/' i
 
 ### Installation
 
-1. Make sure you are running python:
-    1. Use [pyenv-installer](https://github.com/pyenv/pyenv-installer) for installing pyenv
-    1. See which python versions are available: `pyenv install --list`
-    1. Install python 3. Example: `pyenv install 3.6.6` (3.6.6 or higher)
-    1. `pyenv shell 3.6.6`
+1. Setup virtual env
+    ```
+    python3 -m venv venv
+    ```
+    ```
+    source venv/bin/activate
+    ```
 
-    
-2. Install bot dependencies:
-   ```sh
-   pip3 install python-telegram-bot
+2. Install dependencies:
    ```
-3. Install pymongo:
-   ```sh
-   pip3 pymongo
+   pip install -r requirements.txt
    ```
 
-4. Run the app:
-   ```sh
-   python3 main.py
+3. export TELEGRAM_TOKEN=your-telegram-bot-token-goes-here
+
+4. OPTIONAL - run mongodb locally in a container
+   ```
+   docker run --name mongodb -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin mongo
+   ```
+5. export MONGO_FULL_CONNECTION_STRING=<full mongodb connecction string>
+   if you are running mongodb locally you can use:
+   ```
+   export MONGO_FULL_CONNECTION_STRING=mongodb://admin:admin@127.0.0.1
+   ```
+   if you are using remote mongodb, use whatever the provider instructed you to use, e.g:
+   ```
+   export MONGO_FULL_CONNECTION_STRING='mongodb+srv://<username>:<password>@cluster0.r5gkt.mongodb.net/'
+   ```
+
+6. Run the app:
+   ```
+   python main.py
    ```
 
 

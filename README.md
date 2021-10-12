@@ -109,18 +109,15 @@ You can also use the `/setcommands` to define the uses your bot has on the '/' i
 
     
 2. Install bot dependencies:
-   ```sh
-   pip3 install python-telegram-bot
-   ```
-3. Install pymongo:
-   ```sh
-   pip3 pymongo
-   ```
 
-4. Run the app:
-   ```sh
+```sh
+  pip install -r requirements.txt 
+```
+
+3. Run the app:
+```sh
    python3 main.py
-   ```
+```
 
 
 

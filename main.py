@@ -6,12 +6,13 @@ from commands.help import help_command
 
 
 def main():
-    updater = Updater(token='YOUR_TOKEN', use_context=True)
+    updater = Updater(token='1351501215:AAGEc-772JstuCViA0QPqtzbY-vbRZ6lNaU', use_context=True)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler('help', help_command))
     handle_events(dp)
     handle_birthdays(dp)
     updater.start_polling()
+    print("Bot is Online!")
     updater.idle()
 
 

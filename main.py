@@ -6,7 +6,11 @@ from commands.help import help_command
 
 
 def main():
-    updater = Updater(token='1351501215:AAGEc-772JstuCViA0QPqtzbY-vbRZ6lNaU', use_context=True)
+    token = ""
+    if (len(token) == 0):
+        print("BOT_TOKEN must be provided!")
+        return
+    updater = Updater(token=token, use_context=True)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler('help', help_command))
     handle_events(dp)

@@ -13,17 +13,17 @@ def next_birthday(update, context):
     nearest_birthday = None
     now = datetime.now()
     for birthday in next_birthday:
-        c = calculate_dates(birthday['date'], now)
-        if c < distance:
-            distance = c
+        difference_in_days = get_difference_between_dates_in_days(birthday['date'], now)
+        if difference_in_days < distance:
+            distance = difference_in_days
             nearest_birthday = birthday
     if not nearest_birthday:
         return send_message(context, chat_id, "Please load birthdays first.")
-    message = f"Next birthday is in {c} day(s): {parse_birthday(nearest_birthday)}"
+    message = f"Next birthday is in {difference_in_days} day(s): {parse_birthday(nearest_birthday)}"
     return send_message(context, chat_id, message)
 
-def calculate_dates(original_date, now):
-    delta1 = datetime(now.year, original_date.month, original_date.day)
-    delta2 = datetime(now.year+1, original_date.month, original_date.day)
-    return ((delta1 if delta1 > now else delta2) - now).days
+def get_difference_between_dates_in_days(original_date, date_to_compare):
+    delta1 = datetime(date_to_compare.year, original_date.month, original_date.day)
+    delta2 = datetime(date_to_compare.year+1, original_date.month, original_date.day)
+    return ((delta1 if delta1 > date_to_compare else delta2) - date_to_compare).days
 

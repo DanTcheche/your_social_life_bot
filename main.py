@@ -6,7 +6,7 @@ from commands.help import help_command
 
 
 def main():
-    token = "1351501215:AAGEc-772JstuCViA0QPqtzbY-vbRZ6lNaU"
+    token = ""
     if (len(token) == 0):
         print("BOT_TOKEN must be provided!")
         return

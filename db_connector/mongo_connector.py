@@ -1,11 +1,12 @@
+import os
 from pymongo import MongoClient
 
+MONGO_FULL_CONNECTION_STRING = os.environ['MONGO_FULL_CONNECTION_STRING']
 
 class MongoConnector:
 
     def __init__(self):
-        self.client = MongoClient('mongodb+srv://<username>:<password>@cluster0.r5gkt.mongodb.net/'
-                                  '<cluster>?retryWrites=true&w=majority')
+        self.client = MongoClient(MONGO_FULL_CONNECTION_STRING)
         self.database = None
 
     def create_database(self, db_name):

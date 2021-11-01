@@ -66,7 +66,7 @@ The current main functionalities are:
 * Birthdays management.
   * Adding birthdays.
   * Listing birthdays.
-  * Getting next birthday (WIP).
+  * Getting next birthday.
   * Notification when it's someone's birthday (WIP).
     
 * Events management.
